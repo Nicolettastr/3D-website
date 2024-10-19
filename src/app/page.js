@@ -6,6 +6,7 @@ import mbg from "../../public/background/mobileBackground.jpeg";
 import RenderModel from "./components/RenderModel";
 import Turtle from "./components/models/Turtle";
 import styles from "./styles/constant.module.css";
+import Navigation from "./components/navigation";
 
 export default function Home() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -26,9 +27,10 @@ export default function Home() {
                 src={windowWidth <= 800 ? mbg : bg}
                 alt='background-image'
                 fill
-                className='w-full h-screen object-cover object-center opacity-80'
+                className='w-full h-screen object-cover object-center opacity-65'
             />
             <div className={`w-full h-screen ${styles.blackBackground}`}>
+                <Navigation />
                 <RenderModel>
                     <Turtle />
                 </RenderModel>

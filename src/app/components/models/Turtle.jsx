@@ -2,16 +2,24 @@
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 export default function Turtle(props) {
     const { nodes, materials } = useGLTF("/models/turtle.glb");
+
+    const modelRef = useRef();
+
+    useFrame((state, delta, xrFrame) => {
+        modelRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.15;
+    });
 
     return (
         <group
             {...props}
             dispose={null}
-            position={[0, 0.3, 1]}
-            scale={[0.06, 0.06, 0.06]}
+            ref={modelRef}
+            position={[0.2, 0.1, 1]}
+            scale={[0.05, 0.05, 0.05]}
             rotation={[0.25, 3, 0]}
         >
             <mesh

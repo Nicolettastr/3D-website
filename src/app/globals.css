@@ -13,3 +13,7 @@
 
 @layer utilities {
 }
+
+.button {
+    color: white;
+}
