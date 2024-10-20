@@ -4,14 +4,17 @@
 
 @layer base {
     :root {
-        --background: 27 27 27;
-        --foreground: 225 225 225;
-        --muted: 115 115 115;
-        --accent: 254 254 91;
+        --background: 30 58 138;
+        --foreground: 191 219 254;
+        --muted: 96 165 250;
+        --accent: 147 197 253;
     }
 }
 
 @layer utilities {
+    .pause {
+        animation-play-state: paused;
+    }
 }
 
 .button {

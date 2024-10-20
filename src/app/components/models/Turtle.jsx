@@ -18,7 +18,7 @@ export default function Turtle(props) {
             {...props}
             dispose={null}
             ref={modelRef}
-            position={[0.2, 0.1, 1]}
+            position={[0.1, 0.1, 1]}
             scale={[0.05, 0.05, 0.05]}
             rotation={[0.25, 3, 0]}
         >
